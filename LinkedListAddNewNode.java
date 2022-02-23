@@ -7,6 +7,7 @@ public class LinkedListAddNewNode<K> implements INode<K> {
     INode tail = null;
 
     public LinkedListAddNewNode(K key) {
+
         this.key = key;
     }
 
