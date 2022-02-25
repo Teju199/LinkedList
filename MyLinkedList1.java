@@ -3,15 +3,30 @@ package LinkedList;
 public class MyLinkedList1<K> implements INode<K>{
     private K key;
     private INode next;
-    INode head = null;
-    INode tail = null;
+    private INode head = null;
+    private INode tail = null;
+
+    public INode getHead() {
+        return head;
+    }
+
+    public void setHead(INode head) {
+        this.head = head;
+    }
+
+    public INode getTail() {
+        return tail;
+    }
+
+    public void setTail(INode tail) {
+        this.tail = tail;
+    }
 
     public MyLinkedList1(K key) {
         this.key = key;
     }
 
     public MyLinkedList1(){
-        
     }
 
 
@@ -46,7 +61,7 @@ public class MyLinkedList1<K> implements INode<K>{
         uc2.PrintNode();
     }
 
-    private void add(INode newNode) {
+    public void add(INode newNode) {
         if(this.tail == null && this.head == null) {
             this.head = newNode;
             this.tail = newNode;
